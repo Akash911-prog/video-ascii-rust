@@ -1,3 +1,5 @@
+use video_ascii_rust::config::Config;
+
 fn main() {
-    println!("Hello, world!");
+    let config = Config::init();
 }
