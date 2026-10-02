@@ -10,3 +10,4 @@ dirs = "5.0"
 clap = { version = "4.3", features = ["derive"] }
 terminal_size = "0.4.4"
 opencv = "0.101.0"
+crossterm = "0.29.0"

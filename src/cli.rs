@@ -24,6 +24,13 @@ pub struct Cli {
     #[arg(short, long, required = false)]
     pub output_dir: Option<String>,
 
+    #[arg(short, long, required = false)]
+    pub bias: Option<f32>,
+
+    #[arg(short, long, required = false)]
+    pub flip: bool,
+
+
     #[arg(short = 'r', long, required = false)]
     pub overwrite: bool,
     #[command(subcommand)]
@@ -43,6 +50,8 @@ pub struct CliArgs {
     pub video_dir: Option<PathBuf>,
     pub output_dir: Option<PathBuf>,
     pub overwrite: bool,
+    pub bias: Option<f32>,
+    pub flip: bool,
 }
 
 impl Cli {
@@ -82,6 +91,8 @@ impl Cli {
             video_dir: cli.video_dir.map(PathBuf::from),
             output_dir: cli.output_dir.map(PathBuf::from),
             overwrite: cli.overwrite,
+            bias: cli.bias,
+            flip: cli.flip
         }
     }
 }

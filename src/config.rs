@@ -9,6 +9,8 @@ pub struct Config {
     pub input_file: PathBuf,
     pub video_file_dir: PathBuf,
     pub output_file_dir: PathBuf,
+    pub bias: Option<f32>,
+    pub flip: bool
 }
 
 impl Config {
@@ -17,6 +19,8 @@ impl Config {
             input_file: PathBuf::new(),
             video_file_dir,
             output_file_dir,
+            bias: None,
+            flip: false
         }
     }
 
@@ -49,6 +53,10 @@ impl Config {
         } else {
             config.input_file = args.input;
         }
+
+        config.bias = args.bias;
+        config.flip = args.flip;
+        
         config
     }
 }
