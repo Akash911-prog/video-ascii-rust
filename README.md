@@ -15,6 +15,8 @@ A simple terminal-based video player that converts video frames into ASCII chara
 
 ## Download
 
+### Windows
+
 Prebuilt releases are available as ZIP archives on the project's **Releases** page.
 
 Download the ZIP, extract it, and run the executable.
@@ -26,6 +28,10 @@ opencv_world4130.dll
 ```
 
 The DLL **must remain in the same directory as the executable**.
+
+### Linux
+
+Currently No direct downloadable. See Build section
 
 ## Usage
 
@@ -130,6 +136,9 @@ ascii-video video.mp4 --overwrite
 ```
 
 ## Building
+
+### Prerequisites
+OpenCv 4130.
 
 Clone the repository and build with Cargo:
 
