@@ -164,7 +164,3 @@ target/
 ```
 
 Unlike the prebuilt release ZIP, the DLL is **not automatically included** when running a manual Cargo build.
-
-## License
-
-Add your license information here.
