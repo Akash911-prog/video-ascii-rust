@@ -36,13 +36,13 @@ Currently No direct downloadable. See Build section
 ## Usage
 
 ```bash
-ascii-video <VIDEO>
+v2ascii <VIDEO>
 ```
 
 Example:
 
 ```bash
-ascii-video video.mp4
+v2ascii video.mp4
 ```
 
 The video will be decoded frame-by-frame and rendered as ASCII in the terminal.
@@ -52,14 +52,14 @@ The video will be decoded frame-by-frame and rendered as ASCII in the terminal.
 The input video can also be provided using `-i` or `--input`:
 
 ```bash
-ascii-video -i video.mp4
+v2ascii -i video.mp4
 ```
 
 Both forms are equivalent:
 
 ```bash
-ascii-video video.mp4
-ascii-video --input video.mp4
+v2ascii video.mp4
+v2ascii --input video.mp4
 ```
 
 ## Options
@@ -83,19 +83,19 @@ The `--bias` option changes how brightness levels are distributed across the ASC
 A value of `1.0` produces a linear distribution.
 
 ```bash
-ascii-video video.mp4 --bias 1.0
+v2ascii video.mp4 --bias 1.0
 ```
 
 Values below `1.0` move the thresholds toward the brighter end, preserving more detail in darker areas.
 
 ```bash
-ascii-video video.mp4 --bias 0.7
+v2ascii video.mp4 --bias 0.7
 ```
 
 Values above `1.0` move the thresholds toward the darker end.
 
 ```bash
-ascii-video video.mp4 --bias 1.5
+v2ascii video.mp4 --bias 1.5
 ```
 
 A reasonable range to experiment with is approximately `0.5`–`2.0`.
@@ -105,7 +105,7 @@ A reasonable range to experiment with is approximately `0.5`–`2.0`.
 `--flip` reverses the brightness-to-character mapping.
 
 ```bash
-ascii-video video.mp4 --flip
+v2ascii video.mp4 --flip
 ```
 
 ## Configuration
@@ -113,26 +113,26 @@ ascii-video video.mp4 --flip
 To see the configuration file path:
 
 ```bash
-ascii-video config --show-path
+v2ascii config --show-path
 ```
 
 ## Examples
 
 ```bash
 # Basic playback
-ascii-video video.mp4
+v2ascii video.mp4
 
 # Preserve more detail in dark areas
-ascii-video video.mp4 --bias 0.7
+v2ascii video.mp4 --bias 0.7
 
 # Invert brightness
-ascii-video video.mp4 --flip
+v2ascii video.mp4 --flip
 
 # Combine options
-ascii-video video.mp4 --bias 0.7 --flip
+v2ascii video.mp4 --bias 0.7 --flip
 
 # Allow overwriting existing files
-ascii-video video.mp4 --overwrite
+v2ascii video.mp4 --overwrite
 ```
 
 ## Building
@@ -159,7 +159,7 @@ Place it in the **same directory as the compiled executable**:
 ```text
 target/
 └── release/
-    ├── ascii-video.exe
+    ├── v2ascii.exe
     └── opencv_world4130.dll
 ```
 
